@@ -1,0 +1,221 @@
+html,body{
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+}
+
+main {
+    max-width:768px;
+    margin: auto;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-right: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    margin-right: auto;
+    margin-left: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+.hero {
+    margin: auto;
+    position:relative;
+}
+
+.hero img{
+    width: 100%;
+    max-height: 500px;
+
+}
+
+option {
+    font-size:0.75rem;
+}
+
+.search-container {
+ max-width: 768px;
+ border: 1px solid #ddd;
+ margin: auto;
+ top:-2rem;
+ position: relative;
+ -webkit-box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
+ -moz-box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
+ box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
+
+}
+
+.form-labels{
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.search-text-content{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 2rem;
+}
+
+.search-text-content h2{
+    margin: 0;
+    text-transform:uppercase;
+
+}
+
+
+.pick-up-date, .drop-off-date{
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 1rem;
+
+}
+
+.pick-up-location, .drop-off-location {
+    display: inline-block;
+    margin: 0; 
+    padding: 1rem;
+    width: 100%;
+
+    align-self:top;
+}
+
+.drop-off-location{
+    display: none;
+}
+
+input, select{
+    font-size: 1rem;
+    border: 1px solid #eee;
+    margin: 1rem;
+    padding: 1rem;
+}
+.canadascape-container{
+    position: absolute;
+    top: -150px;
+    padding: 0;
+    margin: 0;
+    max-width: 768px;
+    overflow: hidden;
+    margin: auto;
+    display: inline;
+}
+
+.canadascape-container img{
+    animation-name: example;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    height: 150px;
+}
+
+.rv-container{
+    top:-125px;
+    position: absolute;
+    padding: 0;
+    left: 35%;
+    z-index: 2;
+
+}
+
+.rv-container img{
+    height: 125px;
+
+}
+
+.row {
+    width: 100%;
+    display:inline-block;
+    display:flex;
+}
+
+.offer-section{
+    z-index:5;
+}
+
+.button{
+    border-radius: .5rem;
+}
+
+
+
+.button-secondary{
+    background: transparent;
+    border: 1px solid #333;
+    color: #333;
+}
+
+.offer{
+    position: relative;
+}
+.offer img{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.offer-content {
+    right: 0;
+    bottom: 100;
+    text-align: right;
+}
+
+.offer-content a {
+
+    margin-top: 2 rem;
+}
+
+.offer-content h3,a {
+    padding: 0;
+    margin: 0;
+}
+
+/* The animation code */
+@keyframes example {
+    0%   {left: 0}
+    100% {left: -300%}
+
+  }
+  
+  /* The element to apply the animation to */

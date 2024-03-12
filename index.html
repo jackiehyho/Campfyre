@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Logo</div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Offers</a>
+            <a href="#" class="nav-link">Our Rental Fleet</a>
+            <a href="#" class="nav-link">Inspiration</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">FAQs</a>
+        </div>
+        <div class="buttons">
+            <button class="button button-secondary">Manage Bookings</button>
+            <button class="button button-primary">Sign Up</button>
+            <button class="button button-primary">Log In</button>
+
+        </div>
+    </div>
+    
+    <div class="hero">
+        <img src="/images/hero.svg" alt="Hero Image">
+    </div>
+    <main>
+
+
+    <div class="search-container">
+
+        <div class="canadascape-container">
+            <img src="/images/canadascapev2.svg" />
+            <!-- <img class="second-image" src="/images/whitehorse.svg" alt="Canada Scape">
+            <img class="second-image" src="/images/vancouver.svg" alt="Canada Scape">
+            <img class="second-image" src="/images/edmonton.svg" alt="Canada Scape">
+            <img class="second-image" src="/images/calgary.svg" alt="Canada Scape">
+            <img class="second-image" src="/images/toronto.svg" alt="Canada Scape">
+            <img class="second-image" src="/images/montreal.svg" alt="Canada Scape">
+            <img class="second-image" src="/images/halifax.svg" alt="Canada Scape"> -->
+        </div>
+        <div class="rv-container">
+            <img class="first-image" src="/images/RV.gif" />
+        </div>
+        <div class="search-text-content">
+            <h2>Search Rentals</h2>
+            <div class="row">
+                <div class="pick-up-date">
+                    <label class="form-labels" for="Pick-Up Date">Pick-Up Date</label><br/>
+                    <input type="date" class="form-control" />
+
+                </div>
+                <div class="drop-off-date">
+                    <label class="form-labels" for="drop-off-date">Drop-Off Date</label><br/>
+                    <input type="date" class="form-control" />
+                </div>  
+           </div>
+
+           <div class="row location-row">
+                <div class="pick-up-location">
+                    <label id="pick-up-label" class="form-labels" for="pick-up-location">Pick-Up & Drop-Off Locations</label><br/>
+                    <select name="locations" id="location-select">
+                    <option value="">Select Location</option>
+                    <option value="vancouver">Vancouver, BC</option>
+                    <option value="calgary">Calgary, AB</option>
+                    <option value="edmonton">Edmonton, AB</option>
+                    <option value="toronto">Toronto, ON</option>
+                    <option value="ottawa">Ottawa, ON</option>
+                    <option value="montreal">Montreal, QB</option>
+                    <option value="halifax">Halifax, QB</option>
+                    </select><br/>
+
+                    <input id="same-location" type="checkbox" class="form-control" name="pick-up-location" id="pick-up-location" onclick="myFunction()" checked  />
+                    <label  class="form-labels"  for="drop-off-checkbox" >Same Pick-Up & Drop-Off locations</label>
+                </div>
+                <div id="drop-off" class="drop-off-location">
+                    <label class="form-labels" for="drop-off-location">Drop-Off Location</label><br/>
+                    <select name="locations" id="drop-off-location">
+                    <option value="">Select Location</option>
+                    <option value="vancouver">Vancouver, BC</option>
+                    <option value="calgary">Calgary, AB</option>
+                    <option value="edmonton">Edmonton, AB</option>
+                    <option value="toronto">Toronto, ON</option>
+                    <option value="ottawa">Ottawa, ON</option>
+                    <option value="montreal">Montreal, QB</option>
+                    <option value="halifax">Halifax, QB</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+
+     
+  
+    
+        </div>
+
+        <section class="offer">
+            <h2>Offers</h2>
+
+            <div class="row">
+                <div class="offer">
+                    <img src="https://placehold.co/600x400/png">
+                    <div class="offer-content">
+                    <h3>Seasonal Special</h3>
+                    <a class="button" href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="offer">
+                    <img src="https://placehold.co/600x400/png">
+                    <div class="offer-content">
+                    <h3>One-Way Special</h3>
+                    <a class="button" href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Your content goes here -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
