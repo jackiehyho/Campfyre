@@ -3,7 +3,8 @@ html,body{
 }
 
 body {
-    width: 100vw;
+    width: 100svw;
+    overflow-x: hidden;
 }
 
 main {
@@ -18,6 +19,7 @@ main {
     background-color: #f2f2f2;
     padding: 10px;
     margin-right: auto;
+    
 }
 
 .logo {
@@ -26,10 +28,9 @@ main {
 }
 
 .nav-links {
+    display:none;
     margin-right: auto;
     margin-left: 1rem;
-    display: flex;
-    gap: 10px;
 }
 
 .nav-link {
@@ -39,8 +40,9 @@ main {
 }
 
 .buttons {
-    display: flex;
+    display:none;
     gap: 10px;
+    padding-right: 1rem;
 }
 
 .button {
@@ -55,6 +57,9 @@ main {
 .hero {
     margin: auto;
     position:relative;
+    background-color:rgb(42, 104, 0);
+    height: 50svh;
+    width: 100%;
 }
 
 .hero img{
@@ -67,16 +72,20 @@ option {
     font-size:0.75rem;
 }
 
+.section-header{
+    text-align:center;
+    width:100%;
+}
+
 .search-container {
  max-width: 768px;
- border: 1px solid #ddd;
+ border: 1px solid #eee;
  margin: auto;
  top:-2rem;
  position: relative;
  -webkit-box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
  -moz-box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
  box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
-
 }
 
 .form-labels{
@@ -86,12 +95,13 @@ option {
     text-transform: uppercase;
 }
 .search-text-content{
+    padding:1rem;
+
     background-color: white;
     display:flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    padding: 2rem;
 }
 
 .search-text-content h2{
@@ -100,12 +110,19 @@ option {
 
 }
 
+.pick-drop-date{
+    display:flex;
+    flex-direction:column;
+
+}
 
 .pick-up-date, .drop-off-date{
-    width: 100%;
-    display: inline-block;
-    margin: 0;
-    padding: 1rem;
+    max-width: 50%;
+    width: 50%;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
 
 }
 
@@ -122,21 +139,30 @@ option {
     display: none;
 }
 
+input[type="date"] { 
+    background: green;
+    color: white;
+  }
+  
+input[type="date"]::-webkit-calendar-picker-indicator {
+
+}
+
+
 input, select{
-    font-size: 1rem;
+    font-size: .5rem;
     border: 1px solid #eee;
-    margin: 1rem;
-    padding: 1rem;
+    padding: .5rem;
 }
 .canadascape-container{
     position: absolute;
-    top: -150px;
+    top: -300px;
     padding: 0;
-    margin: 0;
-    max-width: 768px;
-    overflow: hidden;
     margin: auto;
+    max-width: 100svw;
     display: inline;
+    overflow-x: hidden;
+
 }
 
 .canadascape-container img{
@@ -145,20 +171,20 @@ input, select{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: relative;
-    height: 150px;
+    height: 300px;
 }
 
 .rv-container{
-    top:-125px;
+    top:-100px;
     position: absolute;
     padding: 0;
-    left: 35%;
+    left: 40%;
     z-index: 2;
 
 }
 
 .rv-container img{
-    height: 125px;
+    height: 75px;
 
 }
 
@@ -166,6 +192,9 @@ input, select{
     width: 100%;
     display:inline-block;
     display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .offer-section{
@@ -174,6 +203,7 @@ input, select{
 
 .button{
     border-radius: .5rem;
+    text-decoration: none;;
 }
 
 
@@ -184,31 +214,298 @@ input, select{
     color: #333;
 }
 
+.offer-row{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+
 .offer{
     position: relative;
+    padding: 0;
+    margin: 0;
+
+
 }
 .offer img{
-    position: relative;
-
     width: 100%;
     height: 100%;
-
+    margin: 0;
+    padding: 0;
 }
 
 .offer-content {
+    bottom: 0;
+    position: absolute;
     right: 0;
-    bottom: 100;
     text-align: right;
+    margin: 2rem;
+
+}
+
+.button-row {
+    justify-content: right;
+    width: 100%;
+}
+
+.offer-content h3 {
+    padding: 0;
+}
+
+.search-button{
+    font-size:1rem;
+    font-weight: 700;
+    background-color:darkred;
 }
 
 .offer-content a {
-
-    margin-top: 2 rem;
 }
 
-.offer-content h3,a {
-    padding: 0;
-    margin: 0;
+
+@media (min-width: 768px){
+    html,body{
+        font-family: sans-serif;
+    }
+    
+    body {
+        width: 100vw;
+    }
+    
+    main {
+        max-width:768px;
+        margin: auto;
+        width: 100%;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-right: auto;
+        
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav-links {
+        margin-right: auto;
+        margin-left: 1rem;
+        display: flex;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: #333;
+        padding: 5px;
+    }
+    
+    .buttons {
+        display: flex;
+        gap: 10px;
+        padding-right: 1rem;
+    }
+    
+    .button {
+        padding: 8px 16px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+    .hero {
+        margin: auto;
+        position:relative;
+        background-color:rgb(42, 104, 0);
+        height: 500px;
+        width: 100%;
+    }
+    
+    .hero img{
+        width: 100%;
+        max-height: 500px;
+    
+    }
+    
+    option {
+        font-size:0.75rem;
+    }
+    
+    .search-container {
+     max-width: 768px;
+     border: 1px solid #eee;
+     margin: auto;
+     top:-2rem;
+     position: relative;
+     -webkit-box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
+     -moz-box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
+     box-shadow: 16px 16px 48px -48px rgba(0,0,0,0.75);
+    
+    }
+    
+    .form-labels{
+        font-size: 0.75rem;
+        font-family: sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .search-text-content{
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding: 2rem;
+    }
+    
+    .search-text-content h2{
+        margin: 0;
+        text-transform:uppercase;
+    
+    }
+    
+    
+    .pick-up-date, .drop-off-date{
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        padding: 1rem;
+    
+    }
+    
+    .pick-up-location, .drop-off-location {
+        display: inline-block;
+        margin: 0; 
+        padding: 1rem;
+        width: 100%;
+    
+        align-self:top;
+    }
+    
+    .drop-off-location{
+        display: none;
+    }
+    
+    input, select{
+        font-size: 1rem;
+        border: 1px solid #eee;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .canadascape-container{
+        position: absolute;
+        top: -300px;
+        padding: 0;
+        margin: 0;
+        max-width: 768px;
+        overflow: hidden;
+        margin: auto;
+        display: inline;
+    }
+    
+    .canadascape-container img{
+        animation-name: example;
+        animation-duration: 120s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: relative;
+        height: 300px;
+    }
+    
+    .rv-container{
+        top:-100px;
+        position: absolute;
+        padding: 0;
+        left: 40%;
+        z-index: 2;
+    
+    }
+    
+    .rv-container img{
+        height: 75px;
+    
+    }
+    
+    .row {
+        width: 100%;
+        display:inline-block;
+        display:flex;
+    }
+    
+    .offer-section{
+        z-index:5;
+    }
+    
+    .button{
+        border-radius: .5rem;
+        text-decoration: none;;
+    }
+    
+    
+    
+    .button-secondary{
+        background: transparent;
+        border: 1px solid #333;
+        color: #333;
+    }
+    
+    .offer-row{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        gap: 1rem;
+    
+    }
+    
+    .offer{
+        position: relative;
+        padding: 0;
+        margin: 0;
+    
+    
+    }
+    .offer img{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .offer-content {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        margin: 2rem;
+    
+    }
+    
+    .button-row {
+        justify-content: right;
+        width: 100%;
+    }
+    
+    .offer-content h3 {
+        padding: 0;
+    }
+    
+    .search-button{
+        font-size:1rem;
+        font-weight: 700;
+        background-color:darkred;
+    }
+    
+    .offer-content a {
+    }
+    
+    
 }
 
 /* The animation code */
